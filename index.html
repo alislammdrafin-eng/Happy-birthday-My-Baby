@@ -1,0 +1,535 @@
+```html
+<!-- ... existing code ... -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cinzel (Royal Display), Lora (Bold Editorial Serif), Montserrat (Crisp UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: {
+                            bg: '#160812',
+                            plum: '#240c1d',
+                            burgundy: '#381228',
+                            card: '#2a0f21',
+                            gold: '#e6c27a',
+                            goldLight: '#f8e3b4',
+                            goldDark: '#b88b3a',
+                            rose: '#e899a8',
+                            roseDeep: '#c85a72',
+                            cream: '#fffdf8',
+                            parchment: '#fffdf8'
+                        }
+                    },
+                    fontFamily: {
+                        script: ['"Cinzel"', 'Georgia', 'serif'],
+                        serif: ['"Cinzel"', 'Georgia', 'serif'],
+                        body: ['"Lora"', 'Georgia', 'serif'],
+                        ui: ['"Montserrat"', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px rgba(230, 194, 122, 0.35)',
+                        'gold-soft': '0 10px 35px rgba(0, 0, 0, 0.55), 0 0 15px rgba(230, 194, 122, 0.2)',
+                        'rose-glow': '0 0 25px rgba(232, 153, 168, 0.4)'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        :root {
+            --gold: #e6c27a;
+            --gold-light: #f8e3b4;
+            --rose: #e899a8;
+            --plum: #160812;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 0%, #341026 0%, #1d0917 45%, #11050d 100%);
+            color: #fffdf8;
+            font-family: 'Lora', Georgia, serif;
+            font-weight: 600;
+            overflow-x: hidden;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+<!-- ... existing code ... -->
+        /* Parchment Texture Effect - High Contrast Bright Warm Ivory */
+        .parchment-paper {
+            background-color: #fffdf8;
+            background-image: 
+                radial-gradient(rgba(184, 139, 58, 0.08) 1px, transparent 0),
+                linear-gradient(180deg, #fffefb 0%, #fdf8ee 100%);
+            background-size: 24px 24px, 100% 100%;
+            color: #1f0912;
+        }
+
+        /* Fairy Light Twinkle */
+<!-- ... existing code ... -->
+    <!-- Floating Music & Quick Navigation Bar -->
+    <header class="fixed top-3 left-1/2 -translate-x-1/2 z-40 w-[95%] max-w-4xl">
+        <nav class="backdrop-blur-md bg-royal-plum/90 border border-royal-gold/45 rounded-full px-4 py-2.5 shadow-gold-soft flex items-center justify-between gap-2">
+            <a href="#welcome" class="font-serif font-extrabold tracking-wider text-xl sm:text-2xl text-royal-gold pl-1 hover:text-royal-goldLight transition">
+                DIA ❤️
+            </a>
+
+            <div class="hidden md:flex items-center gap-6 text-sm font-ui font-bold tracking-wide text-royal-cream">
+                <a href="#balloons" class="hover:text-royal-gold transition">Balloons</a>
+                <a href="#cake-ceremony" class="hover:text-royal-gold transition">Chocolate Cake</a>
+                <a href="#love-dialogues" class="hover:text-royal-gold transition">Why I Love You</a>
+                <a href="#love-letter" class="hover:text-royal-gold transition">Love Letter</a>
+            </div>
+
+            <button id="musicToggleBtn" onclick="toggleRomanticMusic()" class="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-royal-goldDark via-royal-gold to-royal-goldDark text-royal-bg font-ui font-bold text-xs sm:text-sm shadow-md hover:brightness-110 active:scale-95 transition cursor-pointer">
+                <span id="musicIcon">🎵</span>
+                <span id="musicLabel">Play Romantic Melody</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 pt-24 pb-24 px-4 sm:px-6 max-w-5xl mx-auto space-y-24 sm:space-y-32">
+
+        <!-- ========================================================= -->
+        <!-- SECTION 1: GRAND ROYAL WELCOME & NICKNAME PETALS          -->
+        <!-- ========================================================= -->
+        <section id="welcome" class="min-h-[82vh] flex flex-col items-center justify-center text-center relative">
+            <div class="royal-frame rounded-3xl bg-royal-plum/85 backdrop-blur-md p-6 sm:p-12 md:p-14 w-full max-w-3xl relative overflow-visible">
+<!-- ... existing code ... -->
+                <p class="uppercase tracking-[0.25em] text-xs sm:text-sm text-royal-goldLight font-ui font-bold mb-3">
+                    A Royal Celebration For The Love Of My Life
+                </p>
+
+                <h1 class="font-serif font-black tracking-wide text-4xl sm:text-6xl md:text-7xl gold-shimmer leading-tight py-2">
+                    Happy Birthday, DIA
+                </h1>
+
+                <p class="mt-4 text-lg sm:text-2xl text-royal-cream font-body font-semibold italic max-w-xl mx-auto leading-relaxed">
+                    "To the girl who makes my world infinitely softer, brighter, and more beautiful every single day."
+                </p>
+
+                <!-- Interactive Nickname Pills -->
+                <div class="mt-8">
+                    <p class="text-xs sm:text-sm uppercase tracking-[0.18em] text-royal-rose font-ui font-bold mb-3">
+                        Tap each of your sweet names for a secret kiss & wish ✨
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3.5" id="nicknameContainer">
+                        <button onclick="triggerNicknameLove(event, 'Babe', 'You are my favorite hello and my hardest goodbye, Babe. ❤️')" class="px-5 py-2.5 rounded-full border-2 border-royal-gold/70 bg-royal-burgundy/90 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif font-bold tracking-wide text-sm sm:text-base transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            ✨ Babe
+                        </button>
+                        <button onclick="triggerNicknameLove(event, 'Jantush', 'My heart skips a beat every single time you smile, Jantush! 🥰')" class="px-5 py-2.5 rounded-full border-2 border-royal-gold/70 bg-royal-burgundy/90 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif font-bold tracking-wide text-sm sm:text-base transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            💖 Jantush
+                        </button>
+                        <button onclick="triggerNicknameLove(event, 'Shona', 'You are more precious to me than all the gold in the world, Shona. ✨')" class="px-5 py-2.5 rounded-full border-2 border-royal-gold/70 bg-royal-burgundy/90 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif font-bold tracking-wide text-sm sm:text-base transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            👑 Shona
+                        </button>
+                        <button onclick="triggerNicknameLove(event, 'Jaanu', 'My soul feels completely at home whenever I am with you, Jaanu. 🌹')" class="px-5 py-2.5 rounded-full border-2 border-royal-gold/70 bg-royal-burgundy/90 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif font-bold tracking-wide text-sm sm:text-base transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            🌹 Jaanu
+                        </button>
+                        <button onclick="triggerNicknameLove(event, 'Lokkhi', 'You bring so much grace, warmth, and blessing into my life, Lokkhi. 💫')" class="px-5 py-2.5 rounded-full border-2 border-royal-gold/70 bg-royal-burgundy/90 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif font-bold tracking-wide text-sm sm:text-base transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            🕊️ Lokkhi
+                        </button>
+                    </div>
+
+                    <!-- Dynamic Nickname Mini Love Note Box -->
+                    <div id="nicknameNoteBox" class="mt-5 min-h-[3.75rem] flex items-center justify-center">
+                        <p id="nicknameNoteText" class="text-base sm:text-xl text-royal-goldLight font-body font-bold px-5 py-2.5 rounded-2xl bg-royal-bg/75 border border-royal-gold/40 transition-all duration-300">
+                            Every name I call you is just another way of saying "I love you endlessly, Dia." ❤️
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Scroll Down CTA -->
+                <div class="mt-8">
+                    <a href="#balloons" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-royal-goldDark via-royal-gold to-royal-goldDark text-royal-bg font-ui font-bold tracking-wide text-sm sm:text-base shadow-gold-glow hover:scale-105 transition">
+                        Begin Your Birthday Surprise ↓
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 2: INTERACTIVE BALLOON POPPING & LOVE REVEALS     -->
+        <!-- ========================================================= -->
+        <section id="balloons" class="scroll-mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs sm:text-sm uppercase tracking-[0.22em] text-royal-rose font-ui font-bold">Pop Every Balloon, My Love</span>
+                <h2 class="font-serif font-extrabold text-3xl sm:text-5xl gold-shimmer mt-2">Balloons Full of My Love</h2>
+                <p class="text-lg sm:text-xl text-royal-cream font-body font-semibold mt-3 leading-relaxed">
+                    Tap each floating royal balloon to pop it and discover why you are the most cherished girl in my universe.
+                </p>
+            </div>
+
+            <!-- Balloon Stage -->
+            <div class="royal-frame rounded-3xl bg-royal-plum/80 backdrop-blur-md p-6 sm:p-10 relative">
+                <!-- Pop Counter -->
+                <div class="flex justify-between items-center mb-6 border-b border-royal-gold/30 pb-3">
+                    <span class="text-sm sm:text-base text-royal-goldLight font-ui font-bold">
+                        Balloons Popped: <strong id="popCount" class="text-royal-gold">0</strong> / <span id="totalBalloons">8</span>
+                    </span>
+                    <button onclick="resetBalloons()" class="text-xs sm:text-sm font-ui font-bold px-4 py-1.5 rounded-full border border-royal-gold/50 text-royal-goldLight hover:bg-royal-gold/20 transition cursor-pointer">
+                        ↻ Refill Balloons
+                    </button>
+                </div>
+
+                <!-- Grid of Interactive Balloons -->
+                <div id="balloonGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 min-h-[260px]">
+                    <!-- Populated via JS -->
+                </div>
+
+                <!-- Revealed Love Note Banner -->
+                <div id="balloonMessageBanner" class="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-royal-burgundy via-royal-card to-royal-burgundy border-2 border-royal-gold/50 text-center shadow-inner transition-all duration-500">
+                    <p id="balloonMessageText" class="text-lg sm:text-2xl text-royal-goldLight font-body font-bold leading-relaxed">
+                        🎈 Go ahead, Jantush — pop a balloon to reveal a piece of my heart!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 3: ROYAL CHOCOLATE CAKE, "FUU" BLOW & KNIFE CUT   -->
+        <!-- ========================================================= -->
+        <section id="cake-ceremony" class="scroll-mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs sm:text-sm uppercase tracking-[0.22em] text-royal-rose font-ui font-bold">Make A Wish, My Queen</span>
+                <h2 class="font-serif font-extrabold text-3xl sm:text-5xl gold-shimmer mt-2">Royal Chocolate Birthday Cake</h2>
+                <p id="cakeInstructionSubtitle" class="text-lg sm:text-xl text-royal-cream font-body font-semibold mt-3 leading-relaxed">
+                    Step 1: Close your eyes, make a wish, and blow <strong class="text-royal-gold font-bold">"Fuu 🌬️"</strong> into your mic (or tap the button below) to blow out your candles!
+                </p>
+            </div>
+
+            <div class="royal-frame rounded-3xl bg-royal-plum/85 backdrop-blur-md p-5 sm:p-10 relative overflow-hidden">
+                
+                <!-- Status Step Indicator -->
+                <div class="flex flex-wrap justify-center gap-3 mb-6">
+                    <span id="stepBadge1" class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold bg-royal-gold text-royal-bg shadow">
+                        1. Blow Candles ("Fuu")
+                    </span>
+                    <span id="stepBadge2" class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold border border-royal-gold/40 text-royal-cream/80">
+                        2. Cut The Chocolate Cake
+                    </span>
+                    <span id="stepBadge3" class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold border border-royal-gold/40 text-royal-cream/80">
+                        3. Celebrate With Kitties
+                    </span>
+                </div>
+<!-- ... existing code ... -->
+                        <div id="catSpeechLeft" class="text-center text-xs bg-royal-cream text-royal-bg font-ui font-bold px-2.5 py-1 rounded-full shadow -mt-2 border border-royal-gold">
+                            Meow! Blow Fuu! 🎂
+                        </div>
+                    </div>
+<!-- ... existing code ... -->
+                        <div id="catSpeechRight" class="text-center text-xs bg-royal-cream text-royal-bg font-ui font-bold px-2.5 py-1 rounded-full shadow -mt-2 border border-royal-gold">
+                            Yum Chocolate! 🍫
+                        </div>
+                    </div>
+<!-- ... existing code ... -->
+                            <!-- Golden Script "DIA" Plaque on Cake Front -->
+                            <rect x="165" y="222" width="90" height="32" rx="16" fill="#1e0914" stroke="#e6c27a" stroke-width="2"/>
+                            <text x="210" y="244" text-anchor="middle" fill="#f8e3b4" font-family="'Cinzel', serif" font-weight="800" font-size="18" letter-spacing="3">
+                                DIA ❤️
+                            </text>
+<!-- ... existing code ... -->
+                <!-- INTERACTIVE CONTROLS FOR CANDLE BLOWING ("FUU") & CAKE CUTTING -->
+                <div class="max-w-xl mx-auto text-center space-y-4 mt-2">
+                    
+                    <!-- Phase 1: Blow Out Candles Controls -->
+                    <div id="blowControls" class="space-y-4">
+                        <!-- Live Breath/Wind Meter -->
+                        <div id="micMeterContainer" class="hidden max-w-xs mx-auto bg-royal-bg/90 p-3.5 rounded-2xl border border-royal-gold/40">
+                            <div class="flex justify-between text-xs font-ui font-bold text-royal-goldLight mb-1.5">
+                                <span>🌬️ Breath ("Fuu") Sensor</span>
+                                <span id="windPercent">0%</span>
+                            </div>
+                            <div class="w-full h-3 bg-royal-plum rounded-full overflow-hidden border border-royal-gold/30">
+                                <div id="windMeterBar" class="h-full w-0 bg-gradient-to-r from-royal-rose via-royal-gold to-emerald-400 transition-all duration-75"></div>
+                            </div>
+                            <p class="text-xs text-royal-cream font-ui font-semibold mt-2">
+                                Blow gently ("Fuuuu!") towards your phone/laptop microphone!
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <button id="enableMicBtn" onclick="startMicBlowDetection()" class="px-6 py-3.5 rounded-full bg-gradient-to-r from-royal-goldDark via-royal-gold to-royal-goldDark text-royal-bg font-ui font-bold text-sm sm:text-base shadow-gold-glow hover:scale-105 active:scale-95 transition cursor-pointer">
+                                🎙️ Enable Mic & Blow "Fuu" 🌬️
+                            </button>
+
+                            <button onclick="blowOutCandles()" class="px-6 py-3.5 rounded-full border-2 border-royal-gold/70 bg-royal-burgundy/90 hover:bg-royal-gold/20 text-royal-goldLight font-ui font-bold text-sm sm:text-base transition active:scale-95 cursor-pointer">
+                                💨 Tap to Blow Candles
+                            </button>
+                        </div>
+                        <p id="micStatusText" class="text-xs sm:text-sm text-royal-rose font-ui font-semibold"></p>
+                    </div>
+
+                    <!-- Phase 2: Cut Cake With Knife Controls -->
+                    <div id="cutControls" class="hidden space-y-4">
+                        <p class="text-base sm:text-xl text-royal-goldLight font-body font-bold">
+                            ✨ Yay! Your wish is on its way to the stars, Shona! Now let's cut your chocolate cake!
+                        </p>
+                        <button id="cutCakeBtn" onclick="animateCutCake()" class="px-8 py-4 rounded-full bg-gradient-to-r from-royal-roseDeep via-royal-rose to-royal-gold text-royal-bg font-ui font-bold text-sm sm:text-base shadow-rose-glow hover:scale-105 active:scale-95 transition cursor-pointer">
+                            🔪 Slice the Chocolate Cake for Dia! 🍫
+                        </button>
+                    </div>
+
+                    <!-- Phase 3: Cake Sliced Celebration Message -->
+                    <div id="celebrateCakeControls" class="hidden space-y-3 p-5 rounded-2xl bg-royal-bg/80 border-2 border-royal-gold/50">
+                        <p class="text-xl sm:text-2xl font-serif font-extrabold text-royal-gold">
+                            First bite for my Queen DIA — Happy Birthday, Jaanu! 🍰❤️
+                        </p>
+                        <p class="text-base sm:text-lg text-royal-cream font-body font-semibold">
+                            Even the kitties are purring with joy for you! Scroll down to read why I love you so much and open your royal love letter.
+                        </p>
+                        <button onclick="resetCakeCeremony()" class="text-xs font-ui font-bold px-4 py-2 rounded-full border border-royal-gold/50 text-royal-goldLight hover:bg-royal-gold/15 transition cursor-pointer">
+                            🕯️ Relight Candles & Replay
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 4: HEARTFELT DIALOGUES ("WHY I LOVE YOU, DIA")     -->
+        <!-- ========================================================= -->
+        <section id="love-dialogues" class="scroll-mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs sm:text-sm uppercase tracking-[0.22em] text-royal-rose font-ui font-bold">Straight From My Heart</span>
+                <h2 class="font-serif font-extrabold text-3xl sm:text-5xl gold-shimmer mt-2">Why I Love You, My Dia</h2>
+                <p class="text-lg sm:text-xl text-royal-cream font-body font-semibold mt-3 leading-relaxed">
+                    A few of the million reasons my heart belongs completely to you, my Lokkhi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Dialogue Card 1 -->
+                <div class="royal-frame rounded-2xl bg-royal-plum/85 p-6 sm:p-8 hover:border-royal-gold transition duration-300 group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl">✨</span>
+                        <span class="text-xs uppercase tracking-widest text-royal-gold font-ui font-bold">For My Jantush</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl sm:text-2xl text-royal-goldLight mb-3">Your Adorable Little Smiles</h3>
+                    <p class="text-base sm:text-lg text-royal-cream font-body font-semibold leading-[1.8]">
+                        "Whenever you smile, Jantush, it feels like the entire universe pauses just to admire you. Your laugh is my favorite melody, and seeing you happy is the greatest gift my life could ever ask for."
+                    </p>
+                </div>
+
+                <!-- Dialogue Card 2 -->
+                <div class="royal-frame rounded-2xl bg-royal-plum/85 p-6 sm:p-8 hover:border-royal-gold transition duration-300 group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl">🌹</span>
+                        <span class="text-xs uppercase tracking-widest text-royal-gold font-ui font-bold">For My Shona</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl sm:text-2xl text-royal-goldLight mb-3">Every Little Version of You</h3>
+                    <p class="text-base sm:text-lg text-royal-cream font-body font-semibold leading-[1.8]">
+                        "I love your endless stories, your cute stubbornness, your childish moments, and your soft heart, Shona. I love every version of you—even on days when you don't realize how extraordinary you are."
+                    </p>
+                </div>
+
+                <!-- Dialogue Card 3 -->
+                <div class="royal-frame rounded-2xl bg-royal-plum/85 p-6 sm:p-8 hover:border-royal-gold transition duration-300 group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl">🕊️</span>
+                        <span class="text-xs uppercase tracking-widest text-royal-gold font-ui font-bold">For My Lokkhi</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl sm:text-2xl text-royal-goldLight mb-3">The Peace I Find In You</h3>
+                    <p class="text-base sm:text-lg text-royal-cream font-body font-semibold leading-[1.8]">
+                        "Out of billions of people in this enormous world, my soul found its home in you, Lokkhi. Even the most ordinary day becomes unforgettable simply because you are part of it."
+                    </p>
+                </div>
+
+                <!-- Dialogue Card 4 -->
+                <div class="royal-frame rounded-2xl bg-royal-plum/85 p-6 sm:p-8 hover:border-royal-gold transition duration-300 group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl">👑</span>
+                        <span class="text-xs uppercase tracking-widest text-royal-gold font-ui font-bold">For My Babe & Jaanu</span>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl sm:text-2xl text-royal-goldLight mb-3">Today, Tomorrow & Always</h3>
+                    <p class="text-base sm:text-lg text-royal-cream font-body font-semibold leading-[1.8]">
+                        "I want to be beside you through every season, every sunset, every silly argument, and every dream you chase, Jaanu. Loving you is the easiest and best decision I have ever made, Babe."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 5: THE GRAND WAX-SEALED ROYAL LOVE LETTER         -->
+        <!-- ========================================================= -->
+        <section id="love-letter" class="scroll-mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs sm:text-sm uppercase tracking-[0.22em] text-royal-rose font-ui font-bold">Sealed With All My Love</span>
+                <h2 class="font-serif font-extrabold text-3xl sm:text-5xl gold-shimmer mt-2">A Love Letter For DIA</h2>
+                <p class="text-lg sm:text-xl text-royal-cream font-body font-semibold mt-3 leading-relaxed">
+                    Tap the royal crimson & gold wax seal to unfold my heart to you.
+                </p>
+            </div>
+
+            <!-- Interactive Envelope Wrapper -->
+            <div id="envelopeContainer" class="max-w-3xl mx-auto">
+                
+                <!-- Closed Royal Envelope Card -->
+                <div id="closedEnvelope" onclick="openLoveLetter()" class="royal-frame rounded-3xl bg-gradient-to-br from-[#3c1229] via-[#280b1b] to-[#1b0712] p-8 sm:p-14 text-center cursor-pointer group hover:shadow-gold-glow transition-all duration-500 relative overflow-hidden">
+                    
+                    <!-- Decorative Corner Flourishes -->
+                    <div class="absolute top-4 left-4 text-royal-gold/50 text-2xl">❧</div>
+                    <div class="absolute top-4 right-4 text-royal-gold/50 text-2xl scale-x-[-1]">❧</div>
+                    <div class="absolute bottom-4 left-4 text-royal-gold/50 text-2xl scale-y-[-1]">❧</div>
+                    <div class="absolute bottom-4 right-4 text-royal-gold/50 text-2xl scale-[-1]">❧</div>
+
+                    <p class="uppercase tracking-[0.25em] text-xs sm:text-sm text-royal-gold font-ui font-bold mb-3">
+                        Private & Confidential • Royal Delivery
+                    </p>
+                    <h3 class="font-serif font-extrabold text-3xl sm:text-5xl text-royal-goldLight mb-6">
+                        For My Love, DIA ❤️
+                    </h3>
+
+                    <!-- Crimson & Gold Wax Seal Button -->
+                    <div class="my-6 flex justify-center">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#a61c3c] via-[#7a1029] to-[#4d0818] border-4 border-royal-gold/80 shadow-2xl flex flex-col items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
+                            <div class="absolute inset-1.5 rounded-full border border-royal-gold/50"></div>
+                            <span class="font-serif font-black tracking-wider text-2xl sm:text-3xl text-royal-goldLight drop-shadow">DIA</span>
+                            <span class="text-[10px] uppercase tracking-widest text-royal-gold font-ui font-bold mt-0.5">Tap Seal</span>
+                        </div>
+                    </div>
+
+                    <p class="text-base sm:text-lg text-royal-cream font-body font-semibold">
+                        Click the golden wax seal to open your birthday letter, Jaanu...
+                    </p>
+                </div>
+
+                <!-- Opened Royal Parchment Love Letter -->
+                <div id="openedLetter" class="hidden parchment-paper rounded-3xl p-6 sm:p-12 md:p-14 shadow-2xl border-2 border-royal-gold relative transition-all duration-700">
+                    
+                    <!-- Top Ornamental Header -->
+                    <div class="flex items-center justify-between border-b-2 border-royal-goldDark/35 pb-4 mb-8">
+                        <div class="flex items-center gap-2 text-[#5c162c]">
+                            <span class="text-xl">👑</span>
+                            <span class="font-serif text-xs sm:text-sm uppercase tracking-[0.2em] font-extrabold">For My Queen DIA</span>
+                        </div>
+                        <button onclick="closeLoveLetter()" class="text-xs sm:text-sm font-ui font-bold px-3.5 py-1.5 rounded-full border border-royal-goldDark/50 text-[#4a1023] hover:bg-royal-goldDark/10 transition cursor-pointer">
+                            Fold Envelope
+                        </button>
+                    </div>
+
+                    <!-- EXACT LOVE LETTER TEXT WORD-FOR-WORD (Bold, Crisp, High Contrast) -->
+                    <article class="space-y-6 text-[18px] sm:text-[20px] md:text-[21px] leading-[1.85] text-[#1f0912] font-body font-semibold">
+                        <p class="font-serif font-extrabold text-2xl sm:text-3xl text-[#6e112d] leading-snug mb-2">
+                            To the girl who makes my world a little more beautiful,
+                        </p>
+
+                        <p class="font-serif font-extrabold text-xl sm:text-2xl text-[#5c0d25]">
+                            Happy Birthday, my love. ❤️
+                        </p>
+
+                        <p>
+                            I wish I could put into words just how much you mean to me, but somehow, every word feels too small when it comes to you. How do I describe someone who has become such a beautiful part of my existence? How do I explain the happiness I find in your presence, the peace I feel in your words, and the countless little moments that become special simply because they have you in them?
+                        </p>
+
+                        <p>
+                            Today is the day the world was gifted with someone who would eventually become my favourite person. And honestly, I don't think you realise how grateful I am that our paths crossed. Out of all the people in this enormous world, I got to know you, fall for you, and call you mine. If that's not something worth being grateful for, I don't know what is.
+                        </p>
+
+                        <p>
+                            I want you to know that I don't just love the beautiful pictures you send me, your adorable little smiles, or the way you make my heart skip a beat. I love the little things too. Your random conversations, your silly complaints, your endless stories, your stubbornness, your childish moments, even those little things you probably don't realise I notice. I love the person you are when nobody is watching. I love every version of you, even the ones you sometimes struggle to love yourself.
+                        </p>
+
+                        <p>
+                            And if there's one thing I wish for you today, it's that life treats your heart as gently as it deserves. May you never run out of reasons to smile. May every dream you've quietly kept inside your heart find its way into reality. May you always find warmth on your coldest days, courage in your hardest moments, and happiness in the simplest things. I hope you never have to question your worth, because you deserve so much more beautiful things than this world could ever put into words.
+                        </p>
+
+                        <p>
+                            I cannot promise that every day will be perfect, or that we'll never disagree, but I can promise that my love isn't something I want to reserve only for the easy days. I want to be there for the ordinary mornings, the unexpected evenings, the silly arguments, the beautiful milestones, and all those little chapters that make a lifetime. I want to keep discovering new reasons to fall in love with you, even after I've run out of words to explain why I did in the first place.
+                        </p>
+
+                        <p>
+                            And someday, when we look back at all these birthdays, I hope we'll have countless beautiful memories to laugh about. I hope we'll remember how young we were, how deeply we loved, and how we kept choosing each other through all the different seasons of life.
+                        </p>
+
+                        <p>
+                            If I were granted a thousand wishes today, I'd probably spend most of them wishing for your happiness. And with whatever wishes remained, I'd wish for more time, more memories, more sunsets, more conversations, and more birthdays beside you.
+                        </p>
+
+                        <p class="font-serif font-extrabold text-xl sm:text-2xl text-[#5c0d25]">
+                            Happy Birthday, my favourite human.
+                        </p>
+
+                        <p>
+                            Thank you for existing. Thank you for being you. And thank you for giving my heart someone so wonderful to love.
+                        </p>
+
+                        <p>
+                            I hope this year brings you everything your beautiful heart has been waiting for. And I hope, in every little and big way, I get to be a part of that happiness.
+                        </p>
+
+                        <p>
+                            I love you more than my words could ever explain, more than these paragraphs could ever express, and perhaps a little more with every passing day.
+                        </p>
+
+                        <p class="font-serif font-extrabold text-xl sm:text-2xl text-[#5c0d25] pt-2 leading-snug">
+                            Here's to you, my love. Today, tomorrow, and all the beautiful tomorrows yet to come. ❤️
+                        </p>
+                    </article>
+
+                    <!-- Bottom Signature & Purring Kitty -->
+                    <div class="mt-10 pt-6 border-t-2 border-royal-goldDark/35 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="text-center sm:text-left">
+                            <p class="font-serif font-extrabold text-2xl sm:text-3xl text-[#6e112d]">Forever Yours, Always</p>
+                            <p class="text-sm text-[#4a1023] font-ui font-bold mt-1">For Babe • Jantush • Shona • Jaanu • Lokkhi</p>
+                        </div>
+
+                        <button onclick="launchGrandFinale()" class="px-6 py-3.5 rounded-full bg-gradient-to-r from-[#7a1836] to-[#4a0d20] text-royal-goldLight font-ui font-bold text-sm sm:text-base shadow-lg hover:scale-105 active:scale-95 transition cursor-pointer">
+                            🎆 Shower Dia With Love & Fireworks!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center py-8 border-t border-royal-gold/30 bg-royal-bg/90 px-4">
+        <p class="font-serif font-extrabold text-2xl sm:text-3xl text-royal-gold">Happy Birthday, My Queen DIA ❤️</p>
+        <p class="text-sm text-royal-cream font-ui font-semibold mt-2">
+            Crafted with infinite love for Babe, Jantush, Shona, Jaanu & Lokkhi • 🐾 Purrs & Kisses
+        </p>
+    </footer>
+<!-- ... existing code ... -->
+                const label = document.createElement('span');
+                label.className = `font-serif font-extrabold text-sm sm:text-base ${item.textColor} px-2 text-center drop-shadow-sm`;
+                label.textContent = item.label;
+<!-- ... existing code ... -->
+                    // Replace balloon with popped heart badge
+                    wrapper.innerHTML = `
+                        <div class="w-24 h-28 sm:w-28 sm:h-32 rounded-2xl border-2 border-royal-gold/45 bg-royal-bg/70 flex flex-col items-center justify-center p-2 text-center animate-fade-in">
+                            <span class="text-2xl mb-1">💖</span>
+                            <span class="text-xs sm:text-sm font-serif text-royal-goldLight font-extrabold">${item.label}</span>
+                        </div>
+                    `;
+<!-- ... existing code ... -->
+            document.getElementById('stepBadge1').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold border border-royal-gold/45 text-royal-goldLight';
+            document.getElementById('stepBadge2').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold bg-royal-gold text-royal-bg shadow';
+
+            document.getElementById('cakeInstructionSubtitle').innerHTML =
+                'Step 2: Your wish is sealed! Now tap <strong class="text-royal-gold font-bold">"Slice the Chocolate Cake"</strong> to cut your Belgian chocolate cake with the golden knife! 🔪🍫';
+<!-- ... existing code ... -->
+                document.getElementById('stepBadge2').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold border border-royal-gold/45 text-royal-goldLight';
+                document.getElementById('stepBadge3').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold bg-royal-gold text-royal-bg shadow';
+
+                document.getElementById('cakeInstructionSubtitle').innerHTML =
+                    'Happy Birthday, <strong class="text-royal-gold font-bold">My Queen DIA!</strong> Enjoy your rich chocolate slice, my Lokkhi! 🍰❤️';
+<!-- ... existing code ... -->
+            document.getElementById('stepBadge1').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold bg-royal-gold text-royal-bg shadow';
+            document.getElementById('stepBadge2').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold border border-royal-gold/40 text-royal-cream/80';
+            document.getElementById('stepBadge3').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-ui font-bold border border-royal-gold/40 text-royal-cream/80';
+
+            document.getElementById('cakeInstructionSubtitle').innerHTML =
+                'Step 1: Close your eyes, make a wish, and blow <strong class="text-royal-gold font-bold">"Fuu 🌬️"</strong> into your mic (or tap the button below) to blow out your candles!';
+        }
+<!-- ... existing code ... -->
+```
